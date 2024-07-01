@@ -9,6 +9,9 @@ import json
 import pickle
 import os 
 
+
+nltk.download('punkt')
+
 stemmer = LancasterStemmer()
 
 with open("intents.json") as file:
