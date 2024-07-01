@@ -7,6 +7,7 @@ from tensorflow.keras.models import load_model
 import random
 import json
 import pickle
+import os 
 
 stemmer = LancasterStemmer()
 
@@ -58,5 +59,6 @@ def get_bot_response():
         return str(response)
     return "Missing Data!"
 
+
 if __name__ == "__main__":
-    app.run()
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
